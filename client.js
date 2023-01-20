@@ -14,6 +14,11 @@ const connect = function () {
     console.log(data)
   });
 
+  conn.on("connect", () => {
+    console.log('Connection successful')
+    conn.write(`Name: YA7`)
+  })
+
   return conn;
 };
 
